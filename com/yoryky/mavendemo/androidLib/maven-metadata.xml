@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.kcode.github.pubutils</groupId>
+  <groupId>com.yoryky.mavendemo</groupId>
   <artifactId>androidLib</artifactId>
   <versioning>
-    <release>0.0.2</release>
+    <release>1.0.0</release>
     <versions>
-      <version>0.0.2</version>
+      <version>1.0.0</version>
     </versions>
-    <lastUpdated>20171129020737</lastUpdated>
+    <lastUpdated>20171129060354</lastUpdated>
   </versioning>
 </metadata>
