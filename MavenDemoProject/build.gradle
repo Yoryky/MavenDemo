@@ -17,9 +17,11 @@ allprojects {
         jcenter()
         maven{
             //本地maven路径
-            //url 'file:///C:/Users/caicai/my/local/repo/'
+            /*url 'file:///C:/Users/caicai/my/local/repo/'*/
+            url 'http://localhost:8081/nexus/content/repositories/releases/'
+            //url 'http://127.0.0.1:8081/nexus/content/groups/localR/'
             //远程maven路径
-            url 'https://raw.githubusercontent.com/Yoryky/MavenDemo/master'
+            //url 'https://raw.githubusercontent.com/Yoryky/MavenDemo/master'
         }
     }
 }

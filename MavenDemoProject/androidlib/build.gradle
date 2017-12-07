@@ -2,11 +2,25 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 uploadArchives{
-    repositories.mavenDeployer{
-        repository(url:LOCAL_REPO_URL)
-        pom.groupId = GROUP_ID
-        pom.artifactId = ARTIFACTID
-        pom.version = LIBRARY_VERSION
+    repositories{
+        mavenDeployer{
+            repository(url: LOCAL_REPO_URL) {
+                authentication(userName: "admin", password: "admin123")
+            }
+
+            pom.groupId = GROUP_ID
+            pom.artifactId = ARTIFACTID
+            pom.version = LIBRARY_VERSION
+
+            pom.project {
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -27,6 +41,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false
+            debuggable true
+        }
+        staging{
+            minifyEnabled false
         }
     }
 }
